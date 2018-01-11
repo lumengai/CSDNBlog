@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/StyleHomePage1.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="wrapAll">
+        @*我是top级菜单栏*@
+        <div class="header">
+            <div class="csdnLog">
+                <img src="~/image/Logimg/csdnLog.jpg" />
+            </div>
+            <div class="h_menu">
+                <ul>
+                    <li><a href="~/Views/Home/Blog">博客</a></li>
+                    <li><a href="~/Views/Home/College">学院</a></li>
+                    <li><a href="~/Views/Home/Download">下载</a></li>
+                    <li><a href="#">问答</a></li>
+                    <li><a href="#">论坛</a></li>
+                    <li><a href="#">...</a></li>
+                </ul>
+            </div>
+            <div class="h3_menu">
+                 <div>
+                     <input type="text" class="circular" /><img src="~/image/Logimg/souBtn.jpg" />
+                 </div>
+            </div>
+            <div class="h2_menu">
+                <ul class="li_leave">
+                    <li><a href="#"><img src="~/image/Logimg/xieLog.jpg">写博客</a></li>
+                    <li><a href="#"><img src="~/image/Logimg/ChatLog.jpg" />发Chat</a></li>
+                    <li><a href="#">登录</a></li>
+                    <li><a href="#">注册</a></li>
+                </ul>
+
+        </div>
+
+        @*身体*@
+        <div>
+            @RenderBody()
+        </div>                              
+
+        @*底部*@
+        <div>
+            @RenderSection("footer",false)
+        </div>
+
+    </div>
+
+</body>
+</html>
